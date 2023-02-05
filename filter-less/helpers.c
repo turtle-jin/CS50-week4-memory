@@ -109,6 +109,12 @@ void blur(int height, int width, RGBTRIPLE image[height][width])
         }
     }
     
-    image = copy;  // write the array "copy" to array "image"   
-    return; 
+    for (int i = 0; i < height; i++)
+    {
+        for (int j = 0; j < width; j++)
+        {
+            image[i][j] = copy[i][j];  // iterate and write the new color to image
+
+        }
+    }
 }
